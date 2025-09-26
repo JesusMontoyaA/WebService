@@ -17,17 +17,17 @@ app.get('/', (req, res) => {
           align-items: center;
           height: 100vh;
           margin: 0;
-          background-color: #f0f0f0; /* Un color de fondo suave */
+          background-color: #9aec79ff; /* Un color de fondo suave */
           font-family: sans-serif;
         }
         h1 {
-          color: steelblue; /* El color que pediste */
+          color: seablue; /* El color que pediste */
           font-size: 3rem;  /* Un poco más grande */
         }
       </style>
     </head>
     <body>
-      <h1>Holaaaa Lola, Jaguar yuuuuuuuu!</h1>
+      <h1>A Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos</h1>
     </body>
     </html>
   `);
