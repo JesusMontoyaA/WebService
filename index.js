@@ -21,13 +21,13 @@ app.get('/', (req, res) => {
           font-family: sans-serif;
         }
         h1 {
-          color: seablue; /* El color que pediste */
-          font-size: 3rem;  /* Un poco más grande */
+          color: seablue;
+          font-size: 3rem;
         }
       </style>
     </head>
     <body>
-      <h1>A Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos</h1>
+      <h1>Jesus Manuel Montoya Arredondo - 22031240 /n A Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos</h1>
     </body>
     </html>
   `);
