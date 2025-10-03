@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Ruta raíz (sirve tu HTML)
 app.get('/', (req, res) => {
   res.send(`
     <!DOCTYPE html>
@@ -11,13 +12,12 @@ app.get('/', (req, res) => {
       <title>Mi Web Service</title>
       <style>
         body {
-          /* Usamos Flexbox para centrar vertical y horizontalmente */
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100vh;
           margin: 0;
-          background-color: #9aec79ff; /* Un color de fondo suave */
+          background-color: #9aec79ff;
           font-family: sans-serif;
         }
         h1 {
@@ -27,10 +27,21 @@ app.get('/', (req, res) => {
       </style>
     </head>
     <body>
-      <h1>Jesus Manuel Montoya Arredondo - 22031240 - A Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos, a Ochoa lo mataron a balazos</h1>
+      <h1>Jesus Manuel Montoya Arredondo - 22031240</h1>
     </body>
     </html>
   `);
+});
+
+// Nueva ruta JSON (recibe un parámetro por query)
+app.get('/saludo', (req, res) => {
+  const nombre = req.query.nombre || "invitado"; // si no mandan nombre, usa "invitado"
+  
+  res.json({
+    mensaje: `Hola, ${nombre}! Bienvenido a mi API.`,
+    longitud: nombre.length,
+    status: "success"
+  });
 });
 
 app.listen(PORT, () => {
