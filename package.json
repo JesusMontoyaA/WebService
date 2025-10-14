@@ -1,7 +1,7 @@
 {
   "name": "hola-mundo-render",
   "version": "1.0.0",
-  "descripcion": "Descripcion xd",
+  "description": "Web Service - JESUS GABRIEL RUIZ DE ANDA 22030856",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
