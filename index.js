@@ -107,5 +107,6 @@ app.get('/saludar/:nombre', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("LOLSOSOS",$,{PORT});
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
+
 });
