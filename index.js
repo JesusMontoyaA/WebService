@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Ruta principal o de bienvenida (sin cambios)
+// Ruta principal
 app.get('/', (req, res) => {
   res.send(`
     <!DOCTYPE html>
@@ -17,18 +17,17 @@ app.get('/', (req, res) => {
     </head>
     <body>
       <h1>Escribe tu nombre</h1>
+      <p>Prueba con: <code>/saludar/TuNombre</code> o <code>/saludar?nombre=TuNombre</code></p>
     </body>
     </html>
   `);
 });
 
-// Ruta que acepta un parámetro y responde con una página HTML estilizada
-app.get('/saludar/:nombre', (req, res) => {
-  // 1. Obtenemos los datos dinámicos
-  const nombreRecibido = req.params.nombre;
+// Ruta que acepta un parámetro o query y responde con HTML
+app.get('/saludar/:nombre?', (req, res) => {
+  const nombreRecibido = req.params.nombre || req.query.nombre || "desconocido";
   const timestamp = new Date().toISOString();
 
-  // 2. Creamos la respuesta HTML completa como un string
   const htmlResponse = `
     <!DOCTYPE html>
     <html lang="es">
@@ -45,7 +44,7 @@ app.get('/saludar/:nombre', (req, res) => {
           align-items: center;
           height: 100vh;
           margin: 0;
-          background-color: #1e1e1e; /* Fondo oscuro */
+          background-color: #1e1e1e;
           font-family: 'Roboto', sans-serif;
           color: #d4d4d4;
         }
@@ -61,7 +60,7 @@ app.get('/saludar/:nombre', (req, res) => {
         }
 
         h1 {
-          color: #569cd6; /* Azul claro */
+          color: #569cd6;
           margin-top: 0;
           border-bottom: 1px solid #444;
           padding-bottom: 15px;
@@ -69,16 +68,16 @@ app.get('/saludar/:nombre', (req, res) => {
 
         .data-entry {
           margin-bottom: 12px;
-          font-family: 'Fira Code', monospace; /* Fuente de tipo código */
+          font-family: 'Fira Code', monospace;
           font-size: 1.1em;
         }
 
         .key {
-          color: #9cdcfe; /* Azul cielo para la clave */
+          color: #9cdcfe;
         }
         
         .value {
-          color: #ce9178; /* Naranja para el valor */
+          color: #ce9178;
         }
       </style>
     </head>
@@ -102,11 +101,9 @@ app.get('/saludar/:nombre', (req, res) => {
     </html>
   `;
 
-  // 3. Enviamos la respuesta HTML
   res.send(htmlResponse);
 });
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
-
 });
